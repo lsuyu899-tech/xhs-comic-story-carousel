@@ -16,7 +16,7 @@ The skill is designed for this workflow:
 Use Codex's skill installer:
 
 ```powershell
-python C:\Users\User\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py --repo lsuyu899-tech/xhs-comic-story-carousel --path skills/xhs-comic-story-carousel
+python "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" --repo lsuyu899-tech/xhs-comic-story-carousel --path skills/xhs-comic-story-carousel
 ```
 
 After installing, restart Codex to pick up the new skill.
@@ -57,4 +57,3 @@ You can provide either a short theme or a full pasted story. The skill will firs
 ## Boundaries
 
 This skill does not log in to Xiaohongshu, scrape content, publish posts, read cookies, or operate any social media account. It only helps with story planning, image prompts, image generation, revision, and local file organization.
-
