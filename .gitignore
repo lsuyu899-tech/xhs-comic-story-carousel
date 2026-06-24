@@ -1,0 +1,8 @@
+# Local generated outputs
+*-2026-*/
+generated_images/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
