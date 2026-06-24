@@ -6,10 +6,12 @@ The skill is designed for this workflow:
 
 1. Receive a raw topic or pasted story.
 2. Ask lightweight questions to lock the main line, protagonist, page count, and ending feeling.
-3. Build a page-by-page storyboard with continuity checks.
-4. Generate complete vertical comic pages directly with Image 2/image generation, including the Chinese text inside the image.
-5. Inspect and regenerate flawed pages, especially wrong Chinese characters, extra hands, or weak transitions.
-6. Save final pages in order as `图1.png`, `图2.png`, etc.
+3. Lock the protagonist with a character card and a `图0角色参考图`.
+4. Build a page-by-page storyboard with continuity checks.
+5. Freeze the confirmed storyboard before image generation.
+6. Generate complete vertical comic pages directly with Image 2/image generation, including the Chinese text inside the image.
+7. Inspect and regenerate flawed pages, especially wrong Chinese characters, extra hands, character drift, or weak transitions.
+8. Save final pages in order as `图1.png`, `图2.png`, etc.
 
 ## Install
 
@@ -45,6 +47,14 @@ Use $xhs-comic-story-carousel
 ```
 
 You can provide either a short theme or a full pasted story. The skill will first shape the story into a coherent carousel, then generate images when the storyboard is ready or when you explicitly ask to skip planning.
+
+## Stability Rules
+
+- The skill defaults to stability mode.
+- It creates or uses a `图0角色参考图` before final story pages.
+- Once you confirm the storyboard, page count, page text, and scenes are frozen.
+- During image generation, the agent should not silently shorten text, rewrite metaphors, change scenes, merge pages, or add new story beats.
+- If a confirmed page is too long for stable Chinese rendering, the agent must ask before changing the wording.
 
 ## What It Produces
 
