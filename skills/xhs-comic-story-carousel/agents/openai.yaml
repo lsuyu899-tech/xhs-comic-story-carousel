@@ -1,4 +1,4 @@
 interface:
   display_name: "小红书手绘故事连载"
-  short_description: "锁定角色参考图和分镜后，用 Image 2 生成小红书手绘连载"
+  short_description: "一步一问锁定主线、角色、风格和分镜，再用 Image 2 生图"
   default_prompt: "Use $xhs-comic-story-carousel to turn my story or topic into a Xiaohongshu hand-drawn comic carousel."

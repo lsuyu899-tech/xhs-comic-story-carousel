@@ -5,13 +5,17 @@ Codex skill for turning a topic, diary, comment, or long real-life story into a 
 The skill is designed for this workflow:
 
 1. Receive a raw topic or pasted story.
-2. Ask lightweight questions to lock the main line, protagonist, page count, and ending feeling.
-3. Lock the protagonist with a character card and a `图0角色参考图`.
-4. Build a page-by-page storyboard with continuity checks.
-5. Freeze the confirmed storyboard before image generation.
-6. Generate complete vertical comic pages directly with Image 2/image generation, including the Chinese text inside the image.
-7. Inspect and regenerate flawed pages, especially wrong Chinese characters, extra hands, character drift, or weak transitions.
-8. Save final pages in order as `图1.png`, `图2.png`, etc.
+2. Ask one decision question per round.
+3. Confirm the main line and ending direction.
+4. Lock the protagonist with a character card.
+5. Lock the visual style.
+6. Create or accept a `图0角色参考图`.
+7. Confirm page count.
+8. Build a page-by-page storyboard with continuity checks.
+9. Freeze the confirmed storyboard before image generation.
+10. Generate complete vertical comic pages directly with Image 2/image generation, including the Chinese text inside the image.
+11. Inspect and regenerate flawed pages, especially wrong Chinese characters, extra hands, character drift, or weak transitions.
+12. Save final pages in order as `图1.png`, `图2.png`, etc.
 
 ## Install
 
@@ -51,6 +55,8 @@ You can provide either a short theme or a full pasted story. The skill will firs
 ## Stability Rules
 
 - The skill defaults to stability mode.
+- The agent should ask only one decision question per round.
+- `可以` approves only the current step, not every later choice.
 - It creates or uses a `图0角色参考图` before final story pages.
 - Once you confirm the storyboard, page count, page text, and scenes are frozen.
 - During image generation, the agent should not silently shorten text, rewrite metaphors, change scenes, merge pages, or add new story beats.
